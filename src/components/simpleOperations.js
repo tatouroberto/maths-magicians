@@ -13,9 +13,9 @@ SimpleOperations.propTypes = {
 
 const Operation = () => (
   <div className="simplest_operation">
-    <SimpleOperations oper="/" />
+    <SimpleOperations oper="+" />
     <SimpleOperations oper="X" />
-    <SimpleOperations oper="*" />
+    <SimpleOperations oper="- " />
     <SimpleOperations oper="+" />
     <SimpleOperations oper="=" />
   </div>
