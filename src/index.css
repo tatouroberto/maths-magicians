@@ -37,7 +37,7 @@
   font-size: 0.7rem;
 }
 
-.complex_operations {
+.complex_operations{
   width: 33.33%;
   border: 1px solid grey;
   display: flex;
@@ -45,11 +45,16 @@
   justify-content: center;
 }
 
+.complex_operations button {
+  width: 100%;
+  height: 100%;
+}
+
 .simplest_operation {
   grid-area: 2 / 4 / 7 / 5;
 }
 
-.sim_operations {
+.sim_operations button{
   width: 100%;
   height: 2.5rem;
   border-top: 1px solid #d1cdcd;
@@ -65,7 +70,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.num_pad p {
+.num_pad button {
   height: 2.5rem;
   width: 100%;
   background-color: rgb(206, 202, 202, 0.8);
@@ -76,11 +81,11 @@
   align-items: center;
 }
 
-#num_pad_zero {
+.num_pad_zero {
   grid-area: 6 / 1 / 7 / 3;
 }
 
-#num_pad_dot {
+.num_pad_dot {
   grid-area: 6 / 3 / 7 / 4;
 }
 
@@ -94,3 +99,4 @@
   width: 100%;
   height: 100%;
 }
+
