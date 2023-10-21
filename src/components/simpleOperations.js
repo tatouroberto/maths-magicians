@@ -1,24 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SimpleOperations = ({ oper }) => (
-  <div className="sim_operations">
-    <p>{oper}</p>
-  </div>
-);
-
+function SimpleOperations({ operation, handleClick }) {
+  return (
+    <div className="sim_operations">
+      <button type="button" onClick={() => { handleClick(operation); }}>
+        {operation}
+      </button>
+    </div>
+  );
+}
 SimpleOperations.propTypes = {
-  oper: PropTypes.string.isRequired,
+  operation: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
-const Operation = () => (
+const Operation = ({ handleClick }) => (
   <div className="simplest_operation">
-    <SimpleOperations oper="+" />
-    <SimpleOperations oper="X" />
-    <SimpleOperations oper="- " />
-    <SimpleOperations oper="+" />
-    <SimpleOperations oper="=" />
+    <SimpleOperations handleClick={handleClick} operation="÷" />
+    <SimpleOperations handleClick={handleClick} operation="x" />
+    <SimpleOperations handleClick={handleClick} operation="-" />
+    <SimpleOperations handleClick={handleClick} operation="+" />
+    <SimpleOperations handleClick={handleClick} operation="=" />
   </div>
 );
+
+Operation.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default Operation;
