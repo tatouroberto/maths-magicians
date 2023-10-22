@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#root {
+  margin: 15% 35% 0 35%;
+}
+
+.calculator_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 2.5rem);
+  height: 15.6rem;
+  border: 5px solid black;
+}
+
+.display_results {
+  grid-area: 1 / 1 / 2 / 5;
+  width: 100%;
+  background-color: rgba(143, 159, 159, 0.6);
+  outline: none;
+  border: 1px solid grey;
+  text-align: end;
+  font-size: 1rem;
+  color: #fff;
+  height: 2.5rem;
+}
+
+.complexed_opearations {
+  grid-area: 2 / 1 / 3 / 4;
+  display: flex;
+  background-color: rgb(206, 202, 202, 0.8);
+  font-size: 0.7rem;
+}
+
+.complex_operations {
+  width: 33.33%;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.complex_operations button {
+  width: 100%;
+  height: 100%;
+}
+
+.simplest_operation {
+  grid-area: 2 / 4 / 7 / 5;
+}
+
+.sim_operations button {
+  width: 100%;
+  height: 2.5rem;
+  border-top: 1px solid #d1cdcd;
+  background-color: rgb(239, 123, 28, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.num_pad {
+  grid-area: 3 / 1 / 7 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.num_pad button {
+  height: 2.5rem;
+  width: 100%;
+  background-color: rgb(206, 202, 202, 0.8);
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.num_pad_zero {
+  grid-area: 6 / 1 / 7 / 3;
+}
+
+.num_pad_dot {
+  grid-area: 6 / 3 / 7 / 4;
+}
+
+#results {
+  justify-content: end;
+  color: white;
+  background-color: rgb(143, 159, 159);
+  border: none;
+  padding: 0;
+  text-align: right;
+  width: 100%;
+  height: 100%;
+}
